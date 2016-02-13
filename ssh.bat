@@ -14,5 +14,7 @@ shift
   if "%~1"=="-i" set keyfile=%2
   shift
 if not "%~1"=="" goto loop
+
+if not keyfile=="" set keyfile=E:\VMware\VirtualMacheines\id_rsa
  
 start "" "%TT_HOME%\ttermpro.exe" %userhost%:%port% /ssh2 /auth=publickey /keyfile=%keyfile% %TT_OPTS%
